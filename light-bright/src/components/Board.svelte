@@ -1,21 +1,26 @@
 <script>
     import Tile from './Tile.svelte'
+    import Button from './Button.svelte'
+    let background = 'rgb(46, 46, 46)';
+
+    const clear = () => {
+        background=''
+        background = 'rgb(46, 46, 46)'
+    }
+
 </script>
 
 <div class="container">
-    <div class="buttons">
-        <button>Remove previous</button>
-        <button>clear</button>
-    </div>
+    <Button on:clear={clear}/>
     <div class="board">
-        <Tile/>
+        {#each Array(100) as _, i}
+        <Tile background={background}/>
+        {/each}
     </div>
 </div>
 
 <style >
-    .buttons {
-        margin: 10px 0;
-    }
+    
     .board {
         width: 500px;
         height: 500px; 

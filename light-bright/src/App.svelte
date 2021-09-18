@@ -1,5 +1,4 @@
 <script>
-	export let name;
 	import Board from './components/Board.svelte';
 </script>
 
@@ -12,6 +11,7 @@
 		color: hsl(0, 0%, 98%);
 		padding: 10px;
 	}
+	
 </style>
 
 
